@@ -19,7 +19,7 @@ maven 'Maven3.8.5'
   }
     stage('Build'){
   steps{
-	  sh  "mvn clean install"
+	  sh  "mvn clean install -DskipTests"
   }
   }
  }
