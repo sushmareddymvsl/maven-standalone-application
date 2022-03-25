@@ -1,7 +1,10 @@
 pipeline{  
   agent any
-	/*def gitHome = tool name: "Git"*/
-	def mvnHome = tool 'Maven 3.8.5'
+	tools{
+maven 'Maven3.8.5'
+
+}
+
   stages{
     stage('Welcome'){
       steps{
@@ -16,7 +19,7 @@ pipeline{
   }
     stage('Build'){
   steps{
-	  sh  "${mavenHome}/bin/mvn clean install"
+	  sh  "mvn clean install"
   }
   }
  }
