@@ -1,6 +1,6 @@
 pipeline{  
   agent any
-	def gitHome = tool name: "Git"
+	/*def gitHome = tool name: "Git"*/
 	def mavenHome = tool name: "Maven 3.8.5"
   stages{
     stage('Welcome'){
